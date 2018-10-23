@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "31ddf189-ed64-4e79-a4ea-3b9960b0f813",
+		"name": "myarticles",
+		"description": "use for simple api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/articles",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"articles"
+					]
+				},
+				"description": "/v1/articles(.:format)     <===>                                                                v1/articles#index"
+			},
+			"response": []
+		},
+		{
+			"name": "Show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/articles/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"articles",
+						"1"
+					]
+				},
+				"description": "/v1/articles/:id(.:format)     <===>                                                               v1/articles#show"
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Riki add new title\",\n\t\"body\": \"Riki article body\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/articles",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"articles"
+					]
+				},
+				"description": "/v1/articles(.:format)   <===>                                                                     v1/articles#create"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Riki add new title\",\n\t\"body\": \"Riki article body\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/articles/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"articles",
+						"1"
+					]
+				},
+				"description": "/v1/articles/:id(.:format)    <===>                                                               v1/articles#destroy"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Riki update new title\",\n\t\"body\": \"Riki update article body\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/articles/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"articles",
+						"2"
+					]
+				},
+				"description": "/v1/articles/:id(.:format)    <===>                                                                 v1/articles#update"
+			},
+			"response": []
+		}
+	]
+}
